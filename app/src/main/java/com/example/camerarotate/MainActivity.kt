@@ -1,9 +1,11 @@
 package com.example.camerarotate
 
 import android.app.Activity
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import androidx.core.app.ActivityCompat
 import java.util.jar.Manifest
@@ -21,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             findViewById<Button>(R.id.bttCamera).isEnabled = true
+        }
+
+        findViewById<Button>(R.id.bttCamera).setOnClickListener {
+
+            var intei = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(intei,101)
         }
 
     }
