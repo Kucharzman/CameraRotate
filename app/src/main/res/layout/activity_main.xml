@@ -9,14 +9,170 @@
     >
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         >
 
+        <ImageView
+            android:id="@+id/ivMain"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="25dp"
+
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        >
+
         <TextView
+            android:id="@+id/lblX"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Obróć X"
+            android:textColor="#FA9C9C"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginVertical="18dp"
+            />
+
+        <SeekBar
+                android:id="@+id/sbRotateX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:thumbTint="#FA9C9C"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/lblY"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Obróć Y"
+            android:textColor="#FA9C9C"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginVertical="18dp"
+            />
+
+        <SeekBar
+            android:id="@+id/sbRotateY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:thumbTint="#FA9C9C"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/lblTransparency"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Przezroczystość"
+            android:textColor="#FA9C9C"
+            android:textSize="9sp"
+            android:textAlignment="center"
+            android:layout_marginVertical="20dp"
+            />
+
+        <SeekBar
+            android:id="@+id/sbTransparency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:thumbTint="#FA9C9C"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/bttRed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#730000"
+            android:text="Red"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/bttGreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Green"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/bttBlue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="Blue"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        >
+            <TextView
+                android:id="@+id/lblFiltr"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="Moc\nfiltru"
+                android:textColor="#FA9C9C"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_marginVertical="10dp"
+                />
+
+            <SeekBar
+                android:id="@+id/sbColorFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:thumbTint="#FA9C9C"
+                />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblJa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
             android:text="Dawid Kubanek, 4prT5"
             android:textColor="#FA9C9C"
             android:textSize="16sp"
@@ -24,10 +180,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.96"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="16dp"
-            />
+            app:layout_constraintVertical_bias="0.96" />
 
     </LinearLayout>
 
