@@ -3,10 +3,12 @@ package com.example.camerarotate
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
+import android.widget.ImageView
 import androidx.core.app.ActivityCompat
 import java.util.jar.Manifest
 
@@ -31,6 +33,15 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intei,101)
         }
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 101){
+
+            var pictura = data?.getParcelableExtra<Bitmap>("data")
+            findViewById<ImageView>(R.id.ivMain).setImageBitmap(pictura)
+        }
     }
 
     override fun onRequestPermissionsResult(
