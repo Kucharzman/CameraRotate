@@ -9,13 +9,57 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.SeekBar
 import androidx.core.app.ActivityCompat
+import com.example.camerarotate.databinding.ActivityMainBinding
 import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var bindowanie : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        bindowanie = ActivityMainBinding.inflate(layoutInflater)
+        val widok = bindowanie.root
+        setContentView(widok)
+
+        bindowanie.sbRotateX.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+                var rotata : Float = bindowanie.sbRotateX.progress.toFloat()
+                bindowanie.ivMain.rotationX = rotata - 180
+
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+
+            }
+        })
+
+        bindowanie.sbRotateY.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+                var rotata : Float = bindowanie.sbRotateY.progress.toFloat()
+                bindowanie.ivMain.rotationY = rotata - 180
+
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+
+            }
+        })
+
 
         findViewById<Button>(R.id.bttCamera).isEnabled = false
 
