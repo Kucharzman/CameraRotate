@@ -120,7 +120,7 @@
             android:id="@+id/lblTransparency"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:text="Przezroczystość"
+            android:text="Widoczność"
             android:textColor="#FA9C9C"
             android:textSize="9sp"
             android:textAlignment="center"
@@ -133,8 +133,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:thumbTint="#FA9C9C"
-            android:max="360"
-            android:progress="180"
+            android:max="255"
+            android:progress="255"
             />
     </LinearLayout>
 

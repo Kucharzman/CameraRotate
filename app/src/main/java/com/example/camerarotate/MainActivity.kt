@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
@@ -48,6 +49,22 @@ class MainActivity : AppCompatActivity() {
 
                 var rotata : Float = bindowanie.sbRotateY.progress.toFloat()
                 bindowanie.ivMain.rotationY = rotata - 180
+
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+
+            }
+        })
+
+        bindowanie.sbTransparency.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                var flota : Float = bindowanie.sbTransparency.progress.toFloat()
+                findViewById<ImageView>(R.id.ivMain).setAlpha(flota/100)
 
             }
 
