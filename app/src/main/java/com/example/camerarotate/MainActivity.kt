@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -92,6 +95,22 @@ class MainActivity : AppCompatActivity() {
 
             var intei = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(intei,101)
+        }
+
+        findViewById<ImageView>(R.id.ivMain).setOnClickListener {
+            findViewById<ImageView>(R.id.ivMain).clearColorFilter()
+        }
+
+        findViewById<Button>(R.id.bttRed).setOnClickListener {
+            findViewById<ImageView>(R.id.ivMain).setColorFilter(Color.RED, PorterDuff.Mode.LIGHTEN)
+        }
+
+        findViewById<Button>(R.id.bttBlue).setOnClickListener {
+            findViewById<ImageView>(R.id.ivMain).setColorFilter(Color.BLUE, PorterDuff.Mode.LIGHTEN)
+        }
+
+        findViewById<Button>(R.id.bttGreen).setOnClickListener {
+            findViewById<ImageView>(R.id.ivMain).setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
         }
 
     }
