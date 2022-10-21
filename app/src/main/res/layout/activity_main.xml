@@ -153,7 +153,10 @@
             android:layout_weight="1"
             android:backgroundTint="#730000"
             android:text="Red"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
 
         <Button
             android:id="@+id/bttGreen"
@@ -162,7 +165,9 @@
             android:layout_weight="1"
             android:backgroundTint="@android:color/holo_green_dark"
             android:text="Green"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
 
         <Button
             android:id="@+id/bttBlue"
@@ -171,7 +176,10 @@
             android:layout_weight="1"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="Blue"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
     </LinearLayout>
 
     <LinearLayout
